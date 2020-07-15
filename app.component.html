@@ -1,0 +1,23 @@
+<h1>{{title}}</h1> <!--{{ }}はコンポーネントのプロパティの値をhtmlのheaderタグの中に渡す。-->
+
+<!--ルートのURLをアドレスバーに貼り付けるのではなく、
+    ユーザーがリンクをクリックして遷移できるようにする。-->
+<!--<nav>要素を追加して、その中にクリックされるとHeroesComponentへ
+    遷移するトリガーになるアンカー要素を追加する。-->
+<nav>
+    <!--dasshboardに行くリンク。-->
+    <p><a routerLink="/dashboard">Dashboard</a></p>
+    <!--Heroesに行くリンク。-->
+    <a routerLink="/heroes">Heroes</a>
+</nav>
+
+<!--ここで1つ下の階層のheroesフォルダのheroコンポーネントhtmlを表示させてるのかな。-->
+<!--ユーザーが遷移したときにアプリはHeroesComponentのみを表示するため、
+    <app-heroes>を必要としない。-->
+<!-- 
+<app-heroes></app-heroes>
+-->
+<!--ルーティングされたビューをどこに表示するかをルーターに教える。-->
+<router-outlet></router-outlet>
+<!--ここで1つ下の階層のheroesフォルダのmessageコンポーネントhtmlを表示させてるのかな。-->
+<app-messages></app-messages>

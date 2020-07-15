@@ -1,0 +1,11 @@
+<!--このHTMLは、コンポーネント内のmessageServiceと直接紐づく。-->
+<!--*ngIfは、表示するメッセージが存在する場合のみメッセージエリアを表示する。-->
+<div *ngIf="messageService.messages.length">
+
+    <h2>Messages</h2>
+<!--Angularのイベントバインディングは、ボタンのクリックイベントとMesseageService.clear()を紐づける。-->
+    <button class="clear"
+            (click)="messageService.clear()">clear</button>
+    <div *ngFor='let message of messageService.messages'> {{message}} </div>
+
+</div>
